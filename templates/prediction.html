@@ -1,0 +1,28 @@
+<div class="ui container">
+
+	<div class="ui cards" style="margin-left: 45%;">
+		<div class="card">
+			<div class="content">
+				<div class="ui segments">
+					<div class="ui segment">
+					  <p><strong>Sepal Length:</strong> {{session['s_len']}}</p>
+					</div>
+					<div class="ui red segment">
+						<p><strong>Sepal Width:</strong> {{session['s_w']}}</p>
+					</div>
+					<div class="ui blue segment">
+						<p><strong>Petal Length:</strong> {{session['p_len']}}</p>
+					</div>
+					<div class="ui green segment">
+						<p><strong>Petal Width:</strong> {{session['p_w']}}</p>
+					</div>
+					<div class="ui yellow segment">
+						<h2>Predicted Class: {{results[0]}}</h2>
+					</div>
+				  </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+

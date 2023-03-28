@@ -1,0 +1,51 @@
+<!-- You MUST include jQuery 3+ before Fomantic -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.2/dist/semantic.min.css">
+<script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.2/dist/semantic.min.js"></script>
+
+
+<div class="ui container" style="margin-left: 45%;">
+    <h1>IRIS Classifier</h1>
+    <h2>Enter measurements:</h2>
+
+    <div class="ui cards">
+        <div class="card">
+        <div class="content">
+            <form class="ui form" method="POST">
+                {# This hidden_tag is a CSRF security feature. #}
+                {{ form.hidden_tag() }}
+                <div class="field">
+                    {{ form.s_len.label }} {{form.s_len}}
+                </div>
+                <div class="field">
+                    {{ form.s_w.label}} {{form.s_w}}
+                </div>
+                <div class="field">
+                    {{form.p_len.label}}{{form.p_len}}
+                </div>
+                <div class="field">
+                    {{form.p_w.label}}{{form.p_w}}
+                </div>
+                <div class="ui button">
+                {{ form.submit() }}
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
+
+  
+<!-- <form  method="POST">
+    {# This hidden_tag is a CSRF security feature. #}
+    {{ form.hidden_tag() }}
+    {{ form.s_len.label }} {{form.s_len}}
+    <br>
+    {{ form.s_w.label}} {{form.s_w}}
+    <br>
+    {{form.p_len.label}}{{form.p_len}}
+    <br>
+    {{form.p_w.label}}{{form.p_w}}
+    <br>
+    {{ form.submit() }}
+</form> -->
